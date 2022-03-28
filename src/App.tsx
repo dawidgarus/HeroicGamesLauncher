@@ -38,7 +38,7 @@ function App() {
     <div className="App">
       <HashRouter>
         <Sidebar />
-        <main className="content">
+        <main className="content" tabIndex={-1}>
           <Switch>
             <Route exact path="/">
               {user && (

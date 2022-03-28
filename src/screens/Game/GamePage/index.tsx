@@ -398,6 +398,7 @@ export default function GamePage(): JSX.Element | null {
                         </Link>
                       ) : (
                         <button
+                          autoFocus={true}
                           onClick={() => handleInstall(is_installed)}
                           disabled={
                             isPlaying ||

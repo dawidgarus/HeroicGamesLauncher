@@ -8,6 +8,7 @@ interface Props {
   className?: string
   disabled?: boolean
   title?: string
+  tabIndex?: number
 }
 
 export default function SvgButton({
@@ -15,7 +16,8 @@ export default function SvgButton({
   children,
   className = '',
   disabled = false,
-  title = undefined
+  title = undefined,
+  tabIndex = undefined
 }: Props) {
   return (
     <button
@@ -23,6 +25,9 @@ export default function SvgButton({
       disabled={disabled}
       className={`svg-button ${className}`}
       onClick={onClick}
+      tabIndex={tabIndex}
+      aria-hidden="true"
+      role="presentation"
     >
       {children}
     </button>
